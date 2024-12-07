@@ -24,5 +24,16 @@ extension UserMember {
 }
 
 extension UserMember : Identifiable {
-
+    public var wrappedId : UUID {
+        id ?? UUID()
+    }
+    public var wrappedEmail : String {
+        email ?? ""
+    }
+    public var wrappedName : String {
+        name ?? ""
+    }
+    public var wrappedPassword : String {
+        password ?? ""
+    }
 }

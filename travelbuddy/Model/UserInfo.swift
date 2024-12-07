@@ -9,21 +9,18 @@ import SwiftUI
 import Foundation
 import CoreData
 
-final class ModelData : ObservableObject {
-    let container : NSPersistentContainer = NSPersistentContainer(name: "travelbuddy") // Core Data 
-    @Published var exception : Exception? = nil
+final class ModelData {
+    var container : PersistenceController
+    var exception: Exception? = nil
     init() {
-        container.loadPersistentStores { description, error in
-            if let error = error {
-                print("Core Data failed to load : \(error.localizedDescription)")
-            }
-        }
+        container = PersistenceController(inMemory: false)
     }
 }
+
 struct AuthenticationError : LocalizedError {
     
 }
-struct MemberIdentifiy : Identifiable {
+struct UserInfo : Identifiable {
     let id : UUID
     var name : String
     var email : String
@@ -37,9 +34,6 @@ struct MemberIdentifiy : Identifiable {
 }
 
 
-extension MemberIdentifiy : NSFetchRequestResult {
-    
-}
 
 
 

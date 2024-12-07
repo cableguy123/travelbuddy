@@ -29,9 +29,22 @@
 		DFA856E82CC94E3800269EE8 /* travelbuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = travelbuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DFAEA43D2CCFC4E000F154B8 /* Exceptions for "travelbuddy" folder in "travelbuddy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				View/EntryView.swift = (ios, );
+			};
+			target = DFA856C82CC94E3600269EE8 /* travelbuddy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DFA856CB2CC94E3600269EE8 /* travelbuddy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DFAEA43D2CCFC4E000F154B8 /* Exceptions for "travelbuddy" folder in "travelbuddy" target */,
+			);
 			path = travelbuddy;
 			sourceTree = "<group>";
 		};

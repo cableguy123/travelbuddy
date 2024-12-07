@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct Message: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+
+struct Message : Identifiable, Codable {
+    // 검색 필터링
+    let id : Int
+    var user : String
+    var text : String
 }
 
-#Preview {
-    Message()
-}

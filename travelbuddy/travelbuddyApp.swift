@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct travelbuddyApp: App {
-    let persistenceController = PersistenceController.shared
-
+    var dataController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            HomeView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
