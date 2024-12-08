@@ -40,14 +40,12 @@ struct HomeView: View {
     }
     var searchResults : [String] {
         if searchText.isEmpty {
-            return names
-        } else {
-            return names.filter {
-                $0.contains(searchText)
-            }
+            
+            
         }
-    }
-}
-#Preview {
-    HomeView()
+        #Preview {
+            HomeView()
+        }
+    
+    
 }
